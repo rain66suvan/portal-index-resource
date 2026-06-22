@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>hth · 用途速览</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f7f9fc;
+            color: #1e2a41;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            line-height: 1.65;
+            padding: 2rem 1.25rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .page {
+            max-width: 720px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 32px;
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.02), 0 4px 8px rgba(0, 20, 40, 0.04);
+            padding: 2.5rem 2rem;
+            transition: padding 0.2s;
+        }
+
+        @media (max-width: 520px) {
+            body {
+                padding: 1rem 0.75rem;
+            }
+            .page {
+                padding: 1.75rem 1.25rem;
+                border-radius: 24px;
+            }
+        }
+
+        /* hero */
+        .hero {
+            margin-bottom: 2.8rem;
+            text-align: left;
+        }
+
+        .hero-label {
+            display: inline-block;
+            background: #e8eef5;
+            color: #2c3e5b;
+            font-size: 0.7rem;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            font-weight: 600;
+            padding: 0.2rem 0.9rem;
+            border-radius: 40px;
+            margin-bottom: 1.2rem;
+        }
+
+        .hero h1 {
+            font-size: 2.4rem;
+            font-weight: 620;
+            letter-spacing: -0.02em;
+            line-height: 1.25;
+            margin-bottom: 1rem;
+            color: #0f1a2e;
+        }
+
+        .hero h1 span {
+            color: #3a6a9f;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: #3d4e68;
+            max-width: 580px;
+        }
+
+        /* 通用小节 */
+        section {
+            margin-bottom: 2.8rem;
+        }
+
+        .section-title {
+            font-size: 1.15rem;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            border-bottom: 1px solid #e7ecf3;
+            padding-bottom: 0.55rem;
+            margin-bottom: 1.3rem;
+            color: #1d2a40;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .section-title small {
+            font-weight: 400;
+            font-size: 0.8rem;
+            color: #6f7f96;
+        }
+
+        .card-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+        }
+
+        .card {
+            background: #f5f8fd;
+            border-radius: 18px;
+            padding: 1.4rem 1.4rem 1.6rem;
+            flex: 1 1 170px;
+            transition: background 0.15s;
+        }
+
+        .card h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.6rem;
+            color: #132237;
+        }
+
+        .card p {
+            font-size: 0.94rem;
+            color: #3f5572;
+        }
+
+        .desc-block p {
+            margin-bottom: 1rem;
+        }
+
+        .desc-block p:last-child {
+            margin-bottom: 0;
+        }
+
+        .faq-item {
+            margin-bottom: 1.2rem;
+        }
+
+        .faq-item strong {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.2rem;
+            color: #1b2a41;
+            font-size: 0.98rem;
+        }
+
+        .faq-item span {
+            color: #3f5370;
+            font-size: 0.95rem;
+        }
+
+        .footnote {
+            border-top: 1px solid #e7ecf3;
+            padding-top: 1.6rem;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: #4f627d;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 0.8rem;
+        }
+
+        .footnote a {
+            color: #1d3a5c;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid transparent;
+            transition: border 0.15s;
+        }
+
+        .footnote a:hover {
+            border-bottom-color: #1d3a5c;
+        }
+
+        .inline-link {
+            color: #1d3a5c;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid #cbd7e6;
+            transition: border 0.1s, background 0.1s;
+        }
+
+        .inline-link:hover {
+            border-bottom-color: #1d3a5c;
+            background: #f0f4fc;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e2eaf3;
+            margin: 1.8rem 0;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <!-- hero 区 -->
+    <div class="hero">
+        <div class="hero-label">用途速查 · 简明索引</div>
+        <h1>从 <span>hth</span> 开始<br>快速识别站点用途</h1>
+        <p>如果你正在寻找这个链接的真实用途，这里提供一条线索：<a href="https://portal-index-hth.com" class="inline-link">hth</a> 背后是一个功能型入口页面，聚合了特定工具与信息引导。下方从结构、场景、高频问题三个层面梳理它的设计意图。</p>
+    </div>
+
+    <!-- 优势区：结构拆解 -->
+    <section>
+        <div class="section-title">
+            <span>⚙️ 结构特征</span>
+            <small>为什么这样设计</small>
+        </div>
+        <div class="card-grid">
+            <div class="card">
+                <h3>直达式布局</h3>
+                <p>页面采用单列窄版心，引导视线自然聚焦。省去多余装饰，降低认知负荷，让首次访问者快速定位关键操作区。</p>
+            </div>
+            <div class="card">
+                <h3>层级标引</h3>
+                <p>通过清晰的分组标题和视觉权重差异，将功能入口、说明、辅助信息分开。用户无需反复扫读即可判断内容归属。</p>
+            </div>
+            <div class="card">
+                <h3>克制的信息量</h3>
+                <p>页面仅保留最必要的段落和链接。避免信息过载，每个区域都对应一类具体用途：验证、跳转、查阅或配置。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 说明区：从用户视角描述 -->
+    <section class="desc-block">
+        <div class="section-title">
+            <span>📌 页面说明</span>
+            <small>典型使用场景</small>
+        </div>
+        <p>当你通过某个渠道获得 <strong>hth</strong> 这个链接时，通常意味着你需要访问一个经过筛选的索引页。它可能被用作内部工具导航、配置面板入口，或是特定服务的统一访问点。页面本身的极简风格并非缺乏内容，而是刻意将选择权交给访问者——所有关键操作均通过明确的文本链接呈现。</p>
+        <p>例如，你可能会在文档、邮件或即时消息中看到形如“请通过 <a href="https://portal-index-hth.com" class="inline-link">hth</a> 完成验证”的提示。此时你只需要点击或复制该地址，即可进入对应的功能界面。页面不包含自动跳转或弹窗，所有行为都由访问者主动触发。</p>
+        <p>另外，部分用户会将此链接收藏为书签，作为日常工作的固定起点。因为页面结构稳定，更新频率低，适合长期引用。</p>
+    </section>
+
+    <!-- FAQ 摘要 -->
+    <section>
+        <div class="section-title">
+            <span>❓ 常见疑问摘要</span>
+            <small>快速澄清</small>
+        </div>
+        <div class="faq-item">
+            <strong>页面为什么没有任何导航菜单？</strong>
+            <span>因为它的定位是单用途入口，而非完整网站。去掉菜单可以避免干扰，让访问者直接关注页面内提供的链接和说明。</span>
+        </div>
+        <div class="faq-item">
+            <strong>链接中的 <em>hth</em> 代表什么？</strong>
+            <span>它是该页面的唯一标识符，通常用于技术对接或权限分组。你可以把它理解为一种短代码，便于在日志、配置文件中引用。</span>
+        </div>
+        <div class="faq-item">
+            <strong>页面内容会经常变动吗？</strong>
+            <span>核心结构很少调整，但底部链接或提示文本可能随服务更新而微调。建议定期通过 <a href="https://portal-index-hth.com" class="inline-link">hth</a> 确认最新状态。</span>
+        </div>
+    </section>
+
+    <!-- 底部链接区 -->
+    <hr>
+    <div class="footnote">
+        <span>© 索引页 · 用途参考</span>
+        <span>
+            <a href="https://portal-index-hth.com">hth</a>
+        </span>
+    </div>
+</div>
+</body>
+</html>
