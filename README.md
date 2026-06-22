@@ -1,2 +1,51 @@
 # portal-index-resource
-HTML page archive and documentation
+
+## 项目简介
+
+`portal-index-resource` 是一个用于归档和发布多个独立 HTML 页面的仓库。该仓库不针对任何特定域名或网站，仅作为静态资源的集合与索引，便于统一管理和分发。
+
+## 目录结构
+
+```
+portal-index-resource/
+├── pages/          # 存放所有 HTML 页面文件
+├── assets/         # 页面引用的静态资源（如 CSS、JS、图片等）
+├── index.html      # 页面索引入口（可选）
+└── README.md       # 本文件
+```
+
+- **pages/**：每个 HTML 页面独立存放，可按照功能或主题划分子目录。
+- **assets/**：页面所需的公共或私有资源，建议按页面名称或类型组织。
+- **index.html**：可选，提供一个简单的页面列表或导航入口。
+
+## 页面归档说明
+
+所有归档的 HTML 页面均为独立、自包含的静态文件。页面之间不存在硬编码的域名依赖，资源引用均使用相对路径或通用协议相对路径。
+
+归档页面应遵循以下原则：
+
+- 每个页面需包含明确的标题与编码声明（如 `<meta charset="UTF-8">`）。
+- 页面内不应包含指向具体外部网站的绝对链接，除非该链接为通用技术文档或标准协议说明。
+- 资源引用应尽量使用相对路径，避免因域名变更导致失效。
+
+## 维护说明
+
+- 如需新增页面，请将 HTML 文件放置于 `pages/` 目录下，并确保所有资源引用正确。
+- 若页面使用了 `assets/` 中的资源，请在提交时一并更新资源文件。
+- 不建议在页面中嵌入外部脚本或样式，以保持归档的独立性与稳定性。
+- 本仓库不主动推广或宣传任何页面内容，仅作为静态资源存储与索引使用。
+
+## 使用方式
+
+可通过直接访问仓库 Pages 服务（如 GitHub Pages）来浏览归档页面。也可以将仓库克隆到本地，通过本地服务器查看。
+
+```bash
+git clone https://github.com/your-username/portal-index-resource.git
+cd portal-index-resource
+# 使用任意静态服务器，例如 Python：
+python -m http.server 8000
+```
+
+## 许可
+
+本仓库内容遵循 [MIT 许可证](LICENSE)，除非页面文件内另有声明。
